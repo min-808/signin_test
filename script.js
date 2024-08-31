@@ -4,10 +4,14 @@ async function signIn(data) {
             method: 'POST',
             body: JSON.stringify({ username: data }),
         })
+
+        window.location.href = '/result.html'
         
-        const comeback = await response.json()
-        document.getElementById("resulting").innerHTML = "Yes it worked"
-        console.log(comeback)
+        if (response.ok) {
+            const comeback = await response.json()
+            document.getElementById("resulting").innerHTML = "Yes it worked"
+            console.log(comeback)
+        }
     } catch (error) {
         console.log(`Something went wrong: ${error}`)
         document.getElementById("resulting").innerHTML = "No it didn't work"
