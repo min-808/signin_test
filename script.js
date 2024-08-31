@@ -16,7 +16,7 @@ async function signIn(user, pass) {
             } else if (comeback["status"] == "Incorrect") {
                 var error = document.createElement("p")
                 error.innerHTML = "Incorrect username or password"
-                document.getElementById("password_input").appendChild(error)
+                document.getElementById("status").appendChild(error)
             } else {
                 console.log("Something went wrong")
             }
