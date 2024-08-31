@@ -12,7 +12,9 @@ async function signIn(data) {
             const comeback = await response.json()
 
             if (comeback["status"] = "Success") {
-                console.log("Successfully signed in as user: ", comeback["username"])
+                console.log("Successfully signed in as user: " + comeback["username"])
+            } else {
+                console.log("Something went wrong")
             }
         }
     } catch (error) {
