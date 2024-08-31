@@ -10,7 +10,7 @@ async function signIn(data) {
         
         if (response.ok) {
             const comeback = await response.json()
-            console.log(comeback)
+            console.log("Heres the response: " + comeback)
         }
     } catch (error) {
         console.log(`Something went wrong: ${error}`)
