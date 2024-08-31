@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#username_label, #choose_username_label, #email_label {
+    margin: 5px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+#username_input, #email_input, #choose_username_input, #choose_password_input {
+    margin-bottom: 15px;
+}
+
+#password_label, #choose_password_label, #confirm_password_label {
+    margin: 5px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+#signup_label {
+    margin-top: 15px;
+}
+
+#welcome_label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#submit_button {
+    margin-top: 15px;
+}
