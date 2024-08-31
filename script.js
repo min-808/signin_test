@@ -9,7 +9,6 @@ async function signIn(data) {
         })
         
         if (response.ok) {
-            window.location.href = 'result.html'
             const comeback = await response.json()
             console.log(comeback)
         }
