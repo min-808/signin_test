@@ -10,7 +10,10 @@ async function signIn(data) {
         
         if (response.ok) {
             const comeback = await response.json()
-            console.log("Heres the response: " + comeback)
+
+            if (comeback["status"] = "Success") {
+                console.log("Successfully signed in as user: ", comeback["username"])
+            }
         }
     } catch (error) {
         console.log(`Something went wrong: ${error}`)
