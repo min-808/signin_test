@@ -15,13 +15,13 @@ async function signIn(user, pass) {
             if (comeback["status"] == "Success") {
                 console.log("Successfully signed in as user: " + comeback["username"])
             } else if (comeback["status"] == "Incorrect") {
-                if (displayedError = false) {
+                if (displayedError == false) {
                     var error = document.createElement("p")
                     error.innerHTML = "Incorrect username or password"
                     error.style.color = "red"
                     error.style.fontWeight = "bold"
                     document.getElementById("status").appendChild(error)
-                    
+
                     displayedError = true
                 }
             } else {
