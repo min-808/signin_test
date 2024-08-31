@@ -1,4 +1,4 @@
-const signUp = async (data) => {
+async function signIn(data) {
     try {
         const response = await fetch('https://nodejs-serverless-function-express-one-teal.vercel.app/api/test', {
             method: 'POST',
