@@ -6,8 +6,10 @@ const signUp = async (data) => {
         })
         
         const comeback = await response.json()
+        document.getElementById("resulting").innerHTML = "Yes it worked"
         console.log(comeback)
     } catch (error) {
         console.log(`Something went wrong: ${error}`)
+        document.getElementById("resulting").innerHTML = "No it didn't work"
     }
 }
