@@ -10,19 +10,16 @@ async function signIn(user, pass) {
         
         if (response.ok) { // Ok, 200-299 status code
             const comeback = await response.json()
-            var displayedError = false
 
             if (comeback["status"] == "Success") {
                 console.log("Successfully signed in as user: " + comeback["username"])
             } else if (comeback["status"] == "Incorrect") {
-                if (displayedError == false) {
+                if (document.getElementById("status").childElementCount == 0) {
                     var error = document.createElement("p")
                     error.innerHTML = "Incorrect username or password"
                     error.style.color = "red"
                     error.style.fontWeight = "bold"
                     document.getElementById("status").appendChild(error)
-
-                    displayedError = true
                 }
             } else {
                 console.log("Something went wrong")
