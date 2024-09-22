@@ -2,9 +2,6 @@ async function signIn(user, pass) {
     try {
         const response = await fetch('https://nodejs-serverless-function-express-one-teal.vercel.app/api/test', {
             method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
             body: JSON.stringify({ username: user, password: pass }),
         })
         
